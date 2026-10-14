@@ -6,7 +6,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const { all } = require('../routes/bloodbank');
 // const { resolve, reject } = require('promise');
 
-const client = new MongoClient("mongodb+srv://bbsystem:bbsystem123456789@cluster0.2o8fidr.mongodb.net/?retryWrites=true&w=majority", {
+const client = new MongoClient(process.env.MONGODB_URI || "", {
     useNewUrlParser: true, useUnifiedTopology: true 
 });
 
